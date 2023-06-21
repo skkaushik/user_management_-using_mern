@@ -1,5 +1,5 @@
 import React ,{useState}from 'react'
-// import axios from "axios"
+import axios from "axios"
 // import { useNavigate } from 'react-router-dom'
 
 
@@ -23,27 +23,13 @@ const handleChange = (e)=>{
     })
 }
 
-const handleSubmit = async(e)=>{
-    // e.preventDefault();
-    //     console.log(user)
-    // const {firstName,lastName,email,password,repassword} = user
-    // if(firstName && lastName && email && password){
-    //     if(password === repassword){
-    //         await axios.post("http://localhost:8080/register",user)
-    //         .then((res) => {
-    //             alert(res.data.message)
-    //             navigate("/login")
+const handleSubmit = async()=>{
+    console.log(user);
+    await axios.post('http://localhost:5050/Register',user)
+    .then(res => console.log(res))
 
-    //         })
 
-    //     }
-    //     else{
-    //         alert("check Your Password")
-    //     }
-    // }
-    // else{
-    //     alert("Enter the Required Fields")
-    // }
+  
 
         
 
