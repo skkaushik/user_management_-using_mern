@@ -23,16 +23,22 @@ const handleChange = (e)=>{
     })
 }
 
-const handleSubmit = async()=>{
+const handleSubmit = async(e)=>{
+    // e.preventDefault();
     console.log(user);
+    const {firstName,lastName,email,password,repassword} = user
+    if(firstName && lastName && email && password){
+        if(password === repassword){
     await axios.post('http://localhost:5050/Register',user)
-    .then(res => console.log(res))
-
-
-  
-
-        
-
+    .then(res => console.log(res.data.message))
+        }
+        else{
+            alert("Check Your Password")
+        }
+    }
+    else{
+        alert('All fields are required')
+    }
 }
   return (
     <div className='container'>
