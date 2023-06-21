@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
 
@@ -19,6 +20,11 @@ function Login() {
                 }
             })
         }
+        const handlesubmit =(e)=>{
+            e.preventDefault();
+            axios.post("http://localhost:5050/Login",user)
+            .then(res => alert(res.data.message))
+        }
   return (
     <div className='Container'>
         <form>
@@ -29,7 +35,7 @@ function Login() {
                 <input type="password" id="password" name='password' value={user.password} onChange={handleChange} />
 
 
-            <button className='btn'>Login</button>
+            <button className='btn' onClick={handlesubmit}>Login</button>
 
 
 
