@@ -3,6 +3,9 @@ import React, { useContext } from 'react'
 import { useState } from 'react';
 import data from '../ContexApi';
 import { useNavigate } from 'react-router-dom';
+import ViewData from './ViewData';
+
+
 
 
 function Login() {
@@ -49,12 +52,15 @@ function Login() {
             <div className='btn-container'>
                     <button className="btn" onClick={handleSubmit}>Login</button>
                     <button className="btn" onClick={()=>navigate("/register")} >Register</button>
+                    <button className="btn" onClick={()=>navigate("/ViewData")} >ViewData</button>
                     
                 </div>
 
 
 
         </form>
+        {/* <ViewData/> */}
+       
     </div>
   )
 }

@@ -9,6 +9,7 @@ import data from './ContexApi';
 
 import './Components/style.css';
 import { useState } from 'react';
+import ViewData from './Components/ViewData';
 
 function App() {
   const [userdata,setUserData]=useState({})
@@ -21,6 +22,7 @@ function App() {
           <Route path='/' element ={userdata && userdata._id ? <Home/>:<Login/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/ViewData' element ={<ViewData/>}/>
         </Routes>
       </Router>
 
