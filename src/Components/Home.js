@@ -1,13 +1,16 @@
-import React from 'react'
-// import data from '../ContextApi'
+import React, { useContext } from 'react'
+import data from '../ContexApi'
+
 
 const Home = () => {
-//   const {userdata,setUserData} = useContext(data)
-//   console.log(userdata.firstName)
+  const {userdata,setUserData} =useContext(data)
+  console.log(userdata)
+
+  
 
 
   const logout = ()=>{
-    // setUserData({})
+    setUserData({})
   }
   return (
     <div className='container container-home'>

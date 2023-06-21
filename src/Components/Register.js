@@ -1,6 +1,6 @@
 import React ,{useState}from 'react'
 import axios from "axios"
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Register = () => {
@@ -11,7 +11,7 @@ const Register = () => {
         password : "",
         repassword: ""
     })
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
 const handleChange = (e)=>{
     const { name , value} = e.target;
@@ -30,7 +30,10 @@ const handleSubmit = async(e)=>{
     if(firstName && lastName && email && password){
         if(password === repassword){
     await axios.post('http://localhost:5050/Register',user)
-    .then(res => console.log(res.data.message))
+    .then((res) => {
+        alert(res.data.message)
+        navigate("/login")
+    })
         }
         else{
             alert("Check Your Password")
@@ -60,7 +63,7 @@ const handleSubmit = async(e)=>{
 
             <button className="btn" onClick={handleSubmit}>Register</button>
 
-            <button className="btn" onClick={()=>("/login")}>login</button>
+            <button className="btn" onClick={()=>navigate("/login")}>login</button>
         </form>
     </div>
   )
