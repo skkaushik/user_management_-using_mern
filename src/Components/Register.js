@@ -26,8 +26,8 @@ const handleChange = (e)=>{
 const handleSubmit = async(e)=>{
     // e.preventDefault();
     console.log(user);
-    const {firstName,lastName,email,password,repassword} = user
-    if(firstName && lastName && email && password){
+    const {firstName,lastName,email,password,repassword,job,address} = user
+    if(firstName && lastName && email && password && job && address){
         if(password === repassword){
     await axios.post('http://localhost:5050/Register',user)
     .then((res) => {
@@ -60,6 +60,12 @@ const handleSubmit = async(e)=>{
             
             <label htmlFor="re-password">Re-Password</label>
             <input type="password" id="re-password" name='repassword' value={user.repassword} onChange={handleChange}/>
+
+            <label htmlFor="job">Job Titile</label>
+            <input type="text" id="job" name='job' value={user.job} onChange={handleChange}/>
+
+            <label htmlFor="address">Address</label>
+            <input type="text" id="address" name='address' value={user.address} onChange={handleChange}/>
 
             <button className="btn" onClick={handleSubmit}>Register</button>
 

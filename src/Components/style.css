@@ -2,7 +2,7 @@
     background-color: #f7eded;
     max-width: 500px;
     max-height: 700px;
-    padding: 50px 20px;
+    padding: 30px 20px;
     width: 100%;
     width: 400px;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
@@ -23,7 +23,7 @@ form input,form label{
     padding: 5px 5px;
 }
 form input{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #000; 
 }
 form input:hover{

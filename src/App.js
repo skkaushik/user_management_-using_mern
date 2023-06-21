@@ -14,9 +14,10 @@ import ViewData from './Components/ViewData';
 function App() {
   const [userdata,setUserData]=useState({})
   console.log(userdata)
+  
   return (
     <div className="App">
-      <data.Provider value={{setUserData}}>
+      <data.Provider value={{userdata,setUserData}}>
       <Router>
         <Routes>
           <Route path='/' element ={userdata && userdata._id ? <Home/>:<Login/>}/>

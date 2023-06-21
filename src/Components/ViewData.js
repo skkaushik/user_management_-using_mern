@@ -22,18 +22,23 @@ function ViewData() {
       
       <table className='table'>
                     <tr>
-                    
-                    <th> Frist Name</th>
-                    <th>Last Name</th>
+                    <th> S.No</th>
+                    <th> Name</th>
                     <th>Email</th>
+                    <th>Job Titile</th>
+                    <th>Address</th>
                     </tr>
                 
         {data.map((data, index) => {
+          
           return (
             <tr>
-                <td>{data.firstName}</td>
-                <td>{data.lastName}</td>
+                <td>{index+1}</td>
+                <td>{data.firstName}{data.lastName}</td>
+                
                 <td>{data.email}</td>
+                <td>{data.job}</td>
+                <td>{data.address}</td>
             </tr>
             
                 
