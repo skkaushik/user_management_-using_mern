@@ -1,12 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import data from '../ContexApi'
 
 
 const Home = () => {
+  const {userdata,setUserData} = useContext(data)
   const user=JSON.parse(localStorage.getItem('user'))
   
 
   const logout = ()=>{
+    setUserData({})
     
   }
   return (

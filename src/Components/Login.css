@@ -43,6 +43,9 @@ form input:hover{
 .btn-container{
     margin: 10px auto;
 }
+.btn-container{
+    margin-left: 40px;
+}
 .username-home{
     text-transform: capitalize;
 }

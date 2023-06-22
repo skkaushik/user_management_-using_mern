@@ -37,7 +37,7 @@ function Signin() {
                 // console.log(res.data.user)
                 setUserData(res.data.user)
                 localStorage.setItem('user',JSON.stringify(res.data.user))
-                navigate("/ ")
+                navigate("/home ")
             })
         }
   return (
@@ -55,7 +55,7 @@ function Signin() {
             <div className='btn-container'>
                     <button className="btn" onClick={handleSubmit}>Login</button>
                     <button className="btn" onClick={()=>navigate("/register")} >Register</button>
-                    <button className="btn" onClick={()=>navigate("/ViewData")} >ViewData</button>
+                    {/* <button className="btn" onClick={()=>navigate("/ViewData")} >ViewData</button> */}
                     
                 </div>
 

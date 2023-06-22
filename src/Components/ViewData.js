@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useEffect,useState } from 'react'
 import './ViewData.css'
 
+
 function ViewData() {
     const url = "http://localhost:5050/view";
   const [data, setData] = useState([]);
@@ -14,6 +15,10 @@ function ViewData() {
   useEffect(() => {
     fetchInfo();
   }, []);
+
+  const deleteUser=()=>{
+    alert("Delete User")
+  }
   return (
     <div className='result'>
 
@@ -27,6 +32,7 @@ function ViewData() {
                     <th>Email</th>
                     <th>Job Titile</th>
                     <th>Address</th>
+                    
                     </tr>
                 
         {data.map((data, index) => {
@@ -39,6 +45,7 @@ function ViewData() {
                 <td>{data.email}</td>
                 <td>{data.job}</td>
                 <td>{data.address}</td>
+               
             </tr>
             
                 

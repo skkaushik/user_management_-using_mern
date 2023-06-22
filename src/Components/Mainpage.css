@@ -1,0 +1,51 @@
+.navbar{
+    /* border: 2px black solid; */
+    width: 100vw;
+    /* height: 40px; */
+    display: flex;
+    justify-content: end;
+    background-color: rgba(240, 248, 255, 0.836);
+
+}
+.navbar a {
+    padding-right: 50px;
+    /* margin-right: 5px; */
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-weight: 500;
+    font-size: larger;
+}
+.nav{
+    width: 300px;
+    /* border: 2px red  solid; */
+}
+
+.heading{
+    /* border:2px solid red; */
+    width: 100vw;
+    height: 90vh;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.heading h1{
+    color: rgba(6, 7, 6, 0.76);
+    text-align: center;
+    margin-top: 150px;
+    font-size: 70px;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0 2px 3px #747474, 
+      1px 3px 4px #222, 
+      0 8px 3px #474747, 
+      0 9px 4px #747474,
+      0 10px 4px #565656,
+      0 9px 4px #343434,
+      0 9px 4px #171717;
+}
+.heading h1:hover{
+    color: black;
+
+}

@@ -10,6 +10,7 @@ import data from './ContexApi';
 import { useState } from 'react';
 import ViewData from './Components/ViewData';
 import Signin from './Components/Signin';
+import Mainpage from './Components/Mainpage';
 
 function App() {
   const [userdata,setUserData]=useState({})
@@ -20,10 +21,11 @@ function App() {
       <data.Provider value={{userdata,setUserData}}>
       <Router>
         <Routes>
-          <Route path='/' element ={userdata && userdata._id ? <Home/>:<Signin/>}/>
+          <Route path='/' element={<Mainpage/>}/>
+          <Route path='/home' element ={userdata && userdata._id ? <Home/>:<Signin/>}/>
           <Route path='/signin' element={<Signin/>}/>
           <Route path='/register' element={<Register/>}/>
-          <Route path='/ViewData' element ={<ViewData/>}/>
+          <Route path='/view' element ={<ViewData/>}/>
         </Routes>
       </Router>
 
