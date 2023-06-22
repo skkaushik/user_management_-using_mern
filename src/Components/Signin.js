@@ -36,11 +36,12 @@ function Signin() {
                 alert(res.data.message)
                 // console.log(res.data.user)
                 setUserData(res.data.user)
+                localStorage.setItem('user',JSON.stringify(res.data.user))
                 navigate("/ ")
             })
         }
   return (
-    <div className='Container1'>
+    <div className='mainbox'>
         <form>
         <label htmlFor='email'>Email Id</label>
                 <input type="email" id="email" name='email' value={user.email} onChange={handleChange} />
