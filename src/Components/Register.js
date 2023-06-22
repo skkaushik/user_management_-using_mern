@@ -25,7 +25,7 @@ const handleChange = (e)=>{
 }
 
 const handleSubmit = async(e)=>{
-    // e.preventDefault();
+    e.preventDefault();
     console.log(user);
     const {firstName,lastName,email,password,repassword,job,address} = user
     if(firstName && lastName && email && password && job && address){
