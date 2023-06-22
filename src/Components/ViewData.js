@@ -15,10 +15,10 @@ function ViewData() {
     fetchInfo();
   }, []);
   return (
-    <div className='container'>
+    <div className='result'>
 
 
-<h3 style={{ color: "green" }}>All User </h3>
+<h3>All User </h3>
       
       <table className='table'>
                     <tr>

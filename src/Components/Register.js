@@ -1,6 +1,7 @@
 import React ,{useState}from 'react'
 import axios from "axios"
 import { useNavigate } from 'react-router-dom'
+import './Register.css';
 
 
 const Register = () => {
@@ -32,7 +33,7 @@ const handleSubmit = async(e)=>{
     await axios.post('http://localhost:5050/Register',user)
     .then((res) => {
         alert(res.data.message)
-        navigate("/login")
+        navigate("/signin")
     })
         }
         else{
@@ -69,7 +70,9 @@ const handleSubmit = async(e)=>{
 
             <button className="btn" onClick={handleSubmit}>Register</button>
 
-            <button className="btn" onClick={()=>navigate("/login")}>login</button>
+            <button className="btn" onClick={()=>navigate("/signin")}>login</button>
+
+
         </form>
     </div>
   )

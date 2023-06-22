@@ -4,11 +4,13 @@ import { useState } from 'react';
 import data from '../ContexApi';
 import { useNavigate } from 'react-router-dom';
 import ViewData from './ViewData';
+import './Login.css'
 
 
 
 
-function Login() {
+
+function Signin() {
     
         const [user, setUser] = useState({
             email: "",
@@ -34,11 +36,11 @@ function Login() {
                 alert(res.data.message)
                 // console.log(res.data.user)
                 setUserData(res.data.user)
-                navigate("/")
+                navigate("/ ")
             })
         }
   return (
-    <div className='Container'>
+    <div className='Container1'>
         <form>
         <label htmlFor='email'>Email Id</label>
                 <input type="email" id="email" name='email' value={user.email} onChange={handleChange} />
@@ -65,4 +67,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Signin
